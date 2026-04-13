@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://cff4ltek7m5me"
 
 window/size/viewport_width=540
 window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [editor]
 
