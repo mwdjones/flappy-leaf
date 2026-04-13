@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cjlxrsa2hrtd3"
+
+[deps]
+
+files=["res://data/67_Year_Annual_Data.total.translation", "res://data/67_Year_Annual_Data.total.translation", "res://data/67_Year_Annual_Data.ET.translation", "res://data/67_Year_Annual_Data.winter.translation", "res://data/67_Year_Annual_Data.max.translation", "res://data/67_Year_Annual_Data.snowpack.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.max.translation", "res://data/67_Year_Annual_Data.min.translation", "res://data/67_Year_Annual_Data.growing.translation", "res://data/67_Year_Annual_Data.frost.translation", "res://data/67_Year_Annual_Data.frost.translation", "res://data/67_Year_Annual_Data.frost.translation"]
+
+source_file="res://data/67_Year_Annual_Data.csv"
+dest_files=["res://data/67_Year_Annual_Data.total.translation", "res://data/67_Year_Annual_Data.total.translation", "res://data/67_Year_Annual_Data.ET.translation", "res://data/67_Year_Annual_Data.winter.translation", "res://data/67_Year_Annual_Data.max.translation", "res://data/67_Year_Annual_Data.snowpack.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.mean.translation", "res://data/67_Year_Annual_Data.max.translation", "res://data/67_Year_Annual_Data.min.translation", "res://data/67_Year_Annual_Data.growing.translation", "res://data/67_Year_Annual_Data.frost.translation", "res://data/67_Year_Annual_Data.frost.translation", "res://data/67_Year_Annual_Data.frost.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ktr5jecvtjo5"]
+
+[ext_resource type="Script" uid="uid://dnx816ggrfu6o" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bglj1kftdfsoc" path="res://player.tscn" id="2_h2yge"]
+[ext_resource type="FontFile" uid="uid://clbr0ci2a3rsv" path="res://fonts/Xolonium-Regular.ttf" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cmwea7ugrdfnm" path="res://art/background_frost2.png" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://8kf0llmo7i87" path="res://flappy1 - 4_11_26, 10.53.mp3" id="6_7mycd"]
+
+[node name="main" type="Node2D" unique_id=1502477568]
+script = ExtResource("1_0xm2m")
+
+[node name="Player" parent="." unique_id=1031665811 instance=ExtResource("2_h2yge")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=186153724]
+scroll_ignore_camera_zoom = true
+
+[node name="BackgroundLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=225923965]
+motion_mirroring = Vector2(540, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BackgroundLayer" unique_id=707017057]
+texture_repeat = 3
+position = Vector2(271.9837, 363.99997)
+scale = Vector2(0.2636878, 0.2693997)
+texture = ExtResource("4_lquwl")
+
+[node name="PipeSpawner" type="Timer" parent="." unique_id=1690401197]
+wait_time = 1.7999999999999998
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=151839092]
+
+[node name="ScoreLabel" type="Label" parent="UI" unique_id=2125824407]
+offset_left = 23.0
+offset_top = 634.0
+offset_right = 114.0
+offset_bottom = 712.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 64
+text = "89"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="UI" unique_id=1341449334]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -113.5
+offset_top = -220.0
+offset_right = 113.5
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 60
+text = "Twwet"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=943799131]
+stream = ExtResource("6_7mycd")
+pitch_scale = 0.3
+parameters/looping = true
+
+[connection signal="hit" from="Player" to="." method="_on_bird_hit"]
+[connection signal="timeout" from="PipeSpawner" to="." method="_on_pipe_spawner_timeout"]

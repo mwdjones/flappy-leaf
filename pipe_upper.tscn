@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cnt457w0vn3bw"]
+
+[ext_resource type="Script" uid="uid://dxwrpc2ibq7e3" path="res://pipe_lower.gd" id="1_lq4ln"]
+[ext_resource type="Texture2D" uid="uid://bt6yqwed18d6n" path="res://art/icicle_transparent.png" id="2_wrmes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uqvy"]
+size = Vector2(20, 468)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08mfy"]
+size = Vector2(12, 349)
+
+[node name="pipe_upper" type="Node2D" unique_id=473602252]
+script = ExtResource("1_lq4ln")
+
+[node name="pipeBottom" type="Area2D" parent="." unique_id=947116133]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pipeBottom" unique_id=36285101]
+position = Vector2(1, -233)
+shape = SubResource("RectangleShape2D_1uqvy")
+
+[node name="scoreArea" type="Area2D" parent="." unique_id=100998328]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scoreArea" unique_id=1102570590]
+position = Vector2(1, 181.5)
+shape = SubResource("RectangleShape2D_08mfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1977469048]
+position = Vector2(-4, -255.99998)
+scale = Vector2(0.24328613, 0.27929688)
+texture = ExtResource("2_wrmes")
+
+[connection signal="body_entered" from="pipeBottom" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="scoreArea" to="." method="_on_score_area_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://blf8grkc22d0f"
+
+[deps]
+
+files=["res://data/data_to_use.start.translation", "res://data/data_to_use.end.translation", "res://data/data_to_use.frost.translation"]
+
+source_file="res://data/data_to_use.csv"
+dest_files=["res://data/data_to_use.start.translation", "res://data/data_to_use.end.translation", "res://data/data_to_use.frost.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bc8h7vxk1jrnx"]
+
+[ext_resource type="Script" uid="uid://dxwrpc2ibq7e3" path="res://pipe_lower.gd" id="1_ni6v1"]
+[ext_resource type="Texture2D" uid="uid://bt6yqwed18d6n" path="res://art/icicle_transparent.png" id="2_2htxc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3wvs"]
+size = Vector2(21, 600)
+
+[node name="pipe_lower" type="Node2D" unique_id=473602252]
+script = ExtResource("1_ni6v1")
+
+[node name="pipeTop" type="Area2D" parent="." unique_id=1416593933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pipeTop" unique_id=1093614370]
+position = Vector2(2, 303)
+shape = SubResource("RectangleShape2D_i3wvs")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1211010614]
+position = Vector2(7, 316.00006)
+rotation = 3.1415927
+scale = Vector2(0.29374555, 0.3370454)
+texture = ExtResource("2_2htxc")
+
+[connection signal="body_entered" from="pipeTop" to="." method="_on_pipe_body_entered"]
